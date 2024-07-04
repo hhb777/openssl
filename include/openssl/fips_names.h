@@ -70,6 +70,13 @@ extern "C" {
  */
 # define OSSL_PROV_FIPS_PARAM_DRBG_TRUNC_DIGEST  "drbg-no-trunc-md"
 
+/*
+ * A boolean that determines if strict DSA signing checks are performed.
+ * A value of 1, means that DSA signing operations are not allowed.
+ * Type: OSSL_PARAM_UTF8_STRING
+ */
+#define OSSL_PROV_FIPS_PARAM_DSA_SIGN_CHECK "dsa-sign-check"
+
 # ifdef __cplusplus
 }
 # endif
