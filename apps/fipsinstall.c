@@ -67,8 +67,8 @@ const OPTIONS fipsinstall_options[] = {
      "Enable the run-time FIPS check for EMS during TLS1_PRF"},
     {"no_drbg_truncated_digests", OPT_DISALLOW_DRGB_TRUNC_DIGEST, '-',
      "Disallow truncated digests with Hash and HMAC DRBGs"},
-     {"no_dsa_sign_check", OPT_DSA_SIGN_CHECK, '-',
-      "Disable strict DSA sign check"},
+     {"dsa_sign_check", OPT_DSA_SIGN_CHECK, '-',
+      "DSA signing is not allowed is this is set"},
     OPT_SECTION("Input"),
     {"in", OPT_IN, '<', "Input config file, used when verifying"},
 
@@ -111,7 +111,7 @@ static FIPS_OPTS fips_opts = {
     1,      /* security_checks */
     0,      /* tls_prf_ems_check */
     0,      /* drgb_no_trunc_dgst */
-    1,      /* dsa_sign_check */
+    0,      /* dsa_sign_check */
 };
 
 static int check_non_pedantic_fips(int pedantic, const char *name)
@@ -424,9 +424,7 @@ opthelp:
             fips_opts.drgb_no_trunc_dgst = 1;
             break;
         case OPT_DSA_SIGN_CHECK:
-            if (!check_non_pedantic_fips(pedantic, "no_dsa_sign_check"))
-                goto end;
-            fips_opts.dsa_sign_check = 0;
+            fips_opts.dsa_sign_check = 1;
             break;
         case OPT_QUIET:
             quiet = 1;
