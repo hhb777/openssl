@@ -75,7 +75,7 @@ extern "C" {
  * This is disabled by default.
  * Type: OSSL_PARAM_UTF8_STRING
  */
-#define OSSL_PROV_FIPS_PARAM_DSA_SIGN_DISABLED "dsa-sign-disabled"
+# define OSSL_PROV_FIPS_PARAM_DSA_SIGN_DISABLED "dsa-sign-disabled"
 
 # ifdef __cplusplus
 }
