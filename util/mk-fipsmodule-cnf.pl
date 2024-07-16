@@ -14,7 +14,7 @@ my $conditional_errors = 1;
 my $security_checks = 1;
 my $ems_check = 1;
 my $drgb_no_trunc_dgst = 1;
-my $dsa_sign_check = 1;
+my $dsa_sign_disabled = 1;
 
 my $activate = 1;
 my $version = 1;
@@ -50,6 +50,6 @@ conditional-errors = $conditional_errors
 security-checks = $security_checks
 tls1-prf-ems-check = $ems_check
 drbg-no-trunc-md = $drgb_no_trunc_dgst
-dsa_sign_check = $dsa_sign_check
+dsa_sign_disabled = $dsa_sign_disabled
 module-mac = $module_mac
 _____

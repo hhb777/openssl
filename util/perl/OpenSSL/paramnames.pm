@@ -33,7 +33,7 @@ my %params = (
     'PROV_PARAM_SECURITY_CHECKS' =>    "security-checks",    # uint
     'PROV_PARAM_TLS1_PRF_EMS_CHECK' => "tls1-prf-ems-check", # uint
     'PROV_PARAM_DRBG_TRUNC_DIGEST' =>  "drbg-no-trunc-md",   # uint
-    'PROV_PARAM_DSA_SIGN_CHECK' =>     "dsa-sign-check",     # uint
+    'PROV_PARAM_DSA_SIGN_DISABLED' =>  "dsa-sign-disabled",  # uint
 
 # Self test callback parameters
     'PROV_PARAM_SELF_TEST_PHASE' =>  "st-phase",# utf8_string

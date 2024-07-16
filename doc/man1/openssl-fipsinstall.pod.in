@@ -24,7 +24,7 @@ B<openssl fipsinstall>
 [B<-no_security_checks>]
 [B<-ems_check>]
 [B<-no_drbg_truncated_digests>]
-[B<-dsa_sign_check>]
+[B<-dsa_sign_disabled>]
 [B<-self_test_onload>]
 [B<-self_test_oninstall>]
 [B<-corrupt_desc> I<selftest_description>]
@@ -191,11 +191,10 @@ See RFC 7627 for information related to EMS.
 Configure the module to not allow truncated digests to be used with Hash and
 HMAC DRBGs.  See FIPS 140-3 IG D.R for details.
 
-=item B<-dsa_sign_check>
+=item B<-dsa_sign_disabled>
 
-Configure the module so that DSA signing is not allowed (DSA signature
-verification is still allowed).
-DSA signing is not approved in FIPS 140-3.
+Configure the module to not allow DSA signing (DSA signature verification is
+still allowed). See FIPS 140-3 IG C.K for details.
 
 =item B<-self_test_onload>
 
