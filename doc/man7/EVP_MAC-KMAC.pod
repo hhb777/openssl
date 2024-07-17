@@ -70,7 +70,9 @@ This settable parameter is described in L<provider-mac(7)>.
 
 =item "no-short-mac" (B<OSSL_PROV_FIPS_PARAM_NO_SHORT_MAC>) <integer>
 
-This settable parameter is described in L<provider-mac(7)>.
+This settable parameter is described in L<provider-mac(7)>.  It is used by
+the OpenSSL FIPS provider and the minimum length output for KMAC
+is defined by NIST's SP 800-185 8.4.2.
 
 =back
 
@@ -148,7 +150,8 @@ set before it instead.
 =head1 SEE ALSO
 
 L<EVP_MAC_CTX_get_params(3)>, L<EVP_MAC_CTX_set_params(3)>,
-L<EVP_MAC(3)/PARAMETERS>, L<OSSL_PARAM(3)>
+L<EVP_MAC(3)/PARAMETERS>, L<OSSL_PARAM(3)>,
+L<SP 800-185 8.4.2|https://nvlpubs.nist.gov/nistpubs/SpecialPublications/NIST.SP.800-185.pdf>
 
 =head1 COPYRIGHT
 
