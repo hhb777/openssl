@@ -210,6 +210,13 @@ static int cmac_set_ctx_params(void *vmacctx, const OSSL_PARAM params[])
             ERR_raise(ERR_LIB_PROV, PROV_R_INVALID_MODE);
             return 0;
         }
+#ifdef FIPS_MODULE
+        if (EVP_CIPHER_is_a(ossl_prov_cipher_cipher(&macctx->cipher),
+                            "DES-EDE3-CBC")) {
+            ERR_raise(ERR_LIB_PROV, EVP_R_UNSUPPORTED_CIPHER);
+            return 0;
+        }
+#endif
     }
 
     if ((p = OSSL_PARAM_locate_const(params, OSSL_MAC_PARAM_KEY)) != NULL) {

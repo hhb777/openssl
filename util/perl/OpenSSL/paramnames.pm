@@ -33,6 +33,7 @@ my %params = (
     'PROV_PARAM_SECURITY_CHECKS' =>    "security-checks",    # uint
     'PROV_PARAM_TLS1_PRF_EMS_CHECK' => "tls1-prf-ems-check", # uint
     'PROV_PARAM_DRBG_TRUNC_DIGEST' =>  "drbg-no-trunc-md",   # uint
+    'PROV_PARAM_TDES_ENCRYPT_DISABLED' => "tdes-encrypt-disabled", #uint
 
 # Self test callback parameters
     'PROV_PARAM_SELF_TEST_PHASE' =>  "st-phase",# utf8_string
@@ -101,6 +102,8 @@ my %params = (
     'CIPHER_PARAM_RC2_KEYBITS' =>          "keybits",     # size_t
     'CIPHER_PARAM_SPEED' =>                "speed",       # uint
     'CIPHER_PARAM_CTS_MODE' =>             "cts_mode",    # utf8_string
+    'CIPHER_PARAM_FIPS_ENCRYPT_CHECK' =>   "encrypt-check", # int
+    'CIPHER_PARAM_FIPS_APPROVED_INDICATOR' => '*ALG_PARAM_FIPS_APPROVED_INDICATOR',
 # For passing the AlgorithmIdentifier parameter in DER form
     'CIPHER_PARAM_ALGORITHM_ID_PARAMS' =>  "alg_id_param",# octet_string
     'CIPHER_PARAM_XTS_STANDARD' =>         "xts_standard",# utf8_string
