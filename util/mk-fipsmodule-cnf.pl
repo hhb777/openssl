@@ -14,6 +14,7 @@ my $conditional_errors = 1;
 my $security_checks = 1;
 my $ems_check = 1;
 my $drgb_no_trunc_dgst = 1;
+my $kdf_key_check = 1;
 
 my $activate = 1;
 my $mac_key;
@@ -48,4 +49,10 @@ security-checks = $security_checks
 tls1-prf-ems-check = $ems_check
 drbg-no-trunc-md = $drgb_no_trunc_dgst
 module-mac = $module_mac
+hkdf-key-check = $kdf_key_check
+tls13-kdf-key-check = $kdf_key_check
+tls1-prf-key-check = $kdf_key_check
+sshkdf-key-check = $kdf_key_check
+sskdf-key-check = $kdf_key_check
+x963kdf-key-check = $kdf_key_check
 _____

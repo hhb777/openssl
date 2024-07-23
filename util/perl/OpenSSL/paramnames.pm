@@ -33,6 +33,12 @@ my %params = (
     'PROV_PARAM_SECURITY_CHECKS' =>    "security-checks",    # uint
     'PROV_PARAM_TLS1_PRF_EMS_CHECK' => "tls1-prf-ems-check", # uint
     'PROV_PARAM_DRBG_TRUNC_DIGEST' =>  "drbg-no-trunc-md",   # uint
+    'PROV_PARAM_HKDF_KEY_CHECK' =>         "hkdf-key-check",         # uint
+    'PROV_PARAM_TLS13_KDF_KEY_CHECK' =>    "tls13-kdf-key-check",    # uint
+    'PROV_PARAM_TLS1_PRF_KEY_CHECK' =>     "tls1-prf-key-check",     # uint
+    'PROV_PARAM_SSHKDF_KEY_CHECK' =>       "sshkdf-key-check",       # uint
+    'PROV_PARAM_SSKDF_KEY_CHECK' =>        "sskdf-key-check",        # uint
+    'PROV_PARAM_X963KDF_KEY_CHECK' =>      "x963kdf-key-check",      # uint
 
 # Self test callback parameters
     'PROV_PARAM_SELF_TEST_PHASE' =>  "st-phase",# utf8_string
@@ -193,6 +199,7 @@ my %params = (
     'KDF_PARAM_ARGON2_MEMCOST' => "memcost",                # uint32_t
     'KDF_PARAM_ARGON2_VERSION' => "version",                # uint32_t
     'KDF_PARAM_FIPS_EMS_CHECK' => "ems_check",              # int
+    'KDF_PARAM_FIPS_KEY_CHECK' => '*PKEY_PARAM_FIPS_KEY_CHECK',
     'KDF_PARAM_FIPS_APPROVED_INDICATOR' => '*ALG_PARAM_FIPS_APPROVED_INDICATOR',
 
 # Known RAND names
