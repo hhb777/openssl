@@ -13,6 +13,7 @@ use Getopt::Long;
 my $conditional_errors = 1;
 my $security_checks = 1;
 my $ems_check = 1;
+my $no_short_mac = 1;
 my $drgb_no_trunc_dgst = 1;
 
 my $activate = 1;
@@ -46,6 +47,7 @@ activate = $activate
 conditional-errors = $conditional_errors
 security-checks = $security_checks
 tls1-prf-ems-check = $ems_check
+no-short-mac = $no_short_mac
 drbg-no-trunc-md = $drgb_no_trunc_dgst
 module-mac = $module_mac
 _____
