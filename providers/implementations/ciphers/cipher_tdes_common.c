@@ -182,6 +182,6 @@ int ossl_tdes_set_ctx_params(void *vctx, const OSSL_PARAM params[])
     if (!OSSL_FIPS_IND_SET_CTX_PARAM((PROV_TDES_CTX *)vctx,
                                      OSSL_FIPS_IND_SETTABLE0, params,
                                      OSSL_CIPHER_PARAM_FIPS_ENCRYPT_CHECK))
-        return  0;
+        return 0;
     return ossl_cipher_generic_set_ctx_params(vctx, params);
 }

@@ -66,9 +66,9 @@ const OSSL_DISPATCH ossl_tdes_##type##_##lcmode##_functions[] = {              \
     { OSSL_FUNC_CIPHER_GETTABLE_CTX_PARAMS,                                    \
       (void (*)(void))ossl_tdes_gettable_ctx_params },                         \
     { OSSL_FUNC_CIPHER_SET_CTX_PARAMS,                                         \
-     (void (*)(void))ossl_tdes_set_ctx_params },                               \
+      (void (*)(void))ossl_tdes_set_ctx_params },                              \
     { OSSL_FUNC_CIPHER_SETTABLE_CTX_PARAMS,                                    \
-     (void (*)(void))ossl_tdes_settable_ctx_params },                          \
+      (void (*)(void))ossl_tdes_settable_ctx_params },                         \
     OSSL_DISPATCH_END                                                          \
 }
 
