@@ -50,6 +50,6 @@ conditional-errors = $conditional_errors
 security-checks = $security_checks
 tls1-prf-ems-check = $ems_check
 drbg-no-trunc-md = $drgb_no_trunc_dgst
-dsa_sign_disabled = $dsa_sign_disabled
+dsa-sign-disabled = $dsa_sign_disabled
 module-mac = $module_mac
 _____
